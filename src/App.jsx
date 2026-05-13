@@ -589,7 +589,7 @@ export default function App() {
 
   return (
     <div className="site">
-      {/* <Scene3D /> */}
+      <Scene3D />
 
       <div
         className="mouseGlow"

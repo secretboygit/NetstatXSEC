@@ -19,8 +19,8 @@ function GirlModel() {
     >
       <primitive
         object={scene}
-        scale={1.4}
-        position={[2.2, -1.8, -1]}
+       scale={2.3}
+       position={[0, -1.2, 0]}
       />
     </Float>
   );

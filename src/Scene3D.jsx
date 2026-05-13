@@ -19,9 +19,9 @@ function GirlModel() {
     >
       <primitive
   object={scene}
-  scale={3}
-  position={[0, -2, 0]}
-  rotation={[0, Math.PI / 4, 0]}
+  scale={5}
+  position={[0, -4, -2]}
+  rotation={[0, 0, 0]}
 />
     </Float>
   );

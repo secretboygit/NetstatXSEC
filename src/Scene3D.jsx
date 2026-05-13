@@ -18,10 +18,11 @@ function GirlModel() {
       floatIntensity={1}
     >
       <primitive
-        object={scene}
-       scale={2.3}
-       position={[0, -1.2, 0]}
-      />
+  object={scene}
+  scale={3}
+  position={[0, -2, 0]}
+  rotation={[0, Math.PI / 4, 0]}
+/>
     </Float>
   );
 }

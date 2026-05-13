@@ -18,11 +18,11 @@ function GirlModel() {
       floatIntensity={1}
     >
       <primitive
-  object={scene}
-  scale={5}
-  position={[0, -4, -2]}
-  rotation={[0, 0, 0]}
-/>
+        object={scene}
+        scale={1.15}
+        position={[2.8, -2.4, -2]}
+        rotation={[0, 0, 0]}
+      />
     </Float>
   );
 }
@@ -69,8 +69,9 @@ export default function Scene3D() {
       <OrbitControls
         enableZoom={false}
         enablePan={false}
+        enableRotate={false}
         autoRotate
-        autoRotateSpeed={0.5}
+        autoRotateSpeed={0.7}
       />
     </Canvas>
   );

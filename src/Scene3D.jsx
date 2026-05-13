@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Float, OrbitControls, Stars, useGLTF } from "@react-three/drei";
 
 function GirlModel() {
-  const { scene } = useGLTF("/girl.glb");
+  const { scene } = useGLTF(`${import.meta.env.BASE_URL}girl.glb`);
 
   return (
     <Float speed={1.5} rotationIntensity={0.25} floatIntensity={1.1}>
@@ -30,4 +30,4 @@ export default function Scene3D() {
   );
 }
 
-useGLTF.preload("/girl.glb");
+useGLTF.preload(`${import.meta.env.BASE_URL}girl.glb`);

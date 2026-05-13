@@ -6,7 +6,7 @@ function GirlModel() {
 
   return (
     <Float speed={1.5} rotationIntensity={0.25} floatIntensity={1.1}>
-      <primitive object={scene} scale={1.8} position={[1.9, -2.1, 0]} />
+      <primitive object={scene} scale={1.8} position={[2.4, -1.7, -1]} />
     </Float>
   );
 }

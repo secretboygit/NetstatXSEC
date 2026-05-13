@@ -1,23 +1,36 @@
 import { Canvas } from "@react-three/fiber";
-import { Stars, useGLTF } from "@react-three/drei";
+import {
+  Float,
+  OrbitControls,
+  Stars,
+  useGLTF,
+} from "@react-three/drei";
 
 function GirlModel() {
-  const { scene } = useGLTF(`${import.meta.env.BASE_URL}girl.glb`);
+  const { scene } = useGLTF(
+    `${import.meta.env.BASE_URL}girl.glb`
+  );
 
   return (
-    <primitive
-      object={scene}
-      scale={3}
-      position={[0, -2, 0]}
-      rotation={[0, 0.4, 0]}
-    />
+    <Float
+      speed={1.5}
+      rotationIntensity={0.2}
+      floatIntensity={1}
+    >
+      <primitive
+  object={scene}
+  scale={5}
+  position={[0, -4, -2]}
+  rotation={[0, 0, 0]}
+/>
+    </Float>
   );
 }
 
 export default function Scene3D() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 7], fov: 45 }}
+      camera={{ position: [0, 0, 5], fov: 45 }}
       style={{
         position: "fixed",
         top: 0,
@@ -28,15 +41,41 @@ export default function Scene3D() {
         pointerEvents: "none",
       }}
     >
-      <ambientLight intensity={2} />
-      <directionalLight position={[5, 5, 5]} intensity={3} />
-      <pointLight position={[-5, 3, 5]} intensity={2} color="#00ff73" />
+      <ambientLight intensity={1.8} />
 
-      <Stars radius={100} depth={60} count={1800} factor={4} fade />
+      <directionalLight
+        position={[5, 5, 5]}
+        intensity={3}
+        color="#ffffff"
+      />
+
+      <pointLight
+        position={[-5, 3, 5]}
+        intensity={2}
+        color="#00ff73"
+      />
+
+      <Stars
+        radius={100}
+        depth={60}
+        count={2500}
+        factor={4}
+        fade
+        speed={1}
+      />
 
       <GirlModel />
+
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        autoRotate
+        autoRotateSpeed={0.5}
+      />
     </Canvas>
   );
 }
 
-useGLTF.preload(`${import.meta.env.BASE_URL}girl.glb`);
+useGLTF.preload(
+  `${import.meta.env.BASE_URL}girl.glb`
+);

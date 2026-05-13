@@ -1,5 +1,31 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stars } from "@react-three/drei";
+import {
+  Float,
+  OrbitControls,
+  Stars,
+  useGLTF,
+} from "@react-three/drei";
+
+function GirlModel() {
+  const { scene } = useGLTF(
+    `${import.meta.env.BASE_URL}girl.glb`
+  );
+
+  return (
+    <Float
+      speed={1.5}
+      rotationIntensity={0.15}
+      floatIntensity={0.8}
+    >
+      <primitive
+        object={scene}
+        scale={2.2}
+        position={[0.8, -3, -2]}
+        rotation={[0, 0, 0]}
+      />
+    </Float>
+  );
+}
 
 export default function Scene3D() {
   return (
@@ -12,6 +38,7 @@ export default function Scene3D() {
         width: "100%",
         height: "100%",
         zIndex: 0,
+        pointerEvents: "none",
       }}
     >
       <ambientLight intensity={1.5} />
@@ -32,6 +59,8 @@ export default function Scene3D() {
         speed={1}
       />
 
+      <GirlModel />
+
       <OrbitControls
         enableZoom={false}
         enablePan={false}
@@ -41,3 +70,7 @@ export default function Scene3D() {
     </Canvas>
   );
 }
+
+useGLTF.preload(
+  `${import.meta.env.BASE_URL}girl.glb`
+);

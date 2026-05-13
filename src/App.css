@@ -551,3 +551,13 @@ body {
   line-height: 1.6 !important;
   font-size: 15px !important;
 }
+canvas {
+  pointer-events: none !important;
+}
+
+.nav,
+main,
+.section {
+  position: relative;
+  z-index: 5;
+}

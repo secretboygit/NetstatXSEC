@@ -561,3 +561,37 @@ main,
   position: relative;
   z-index: 5;
 }
+canvas {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.site {
+  position: relative !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.nav,
+main,
+.section,
+.hero,
+.card,
+.securityPanel {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.gridBg {
+  z-index: 0 !important;
+}
+
+.noise,
+.mouseGlow {
+  pointer-events: none !important;
+  z-index: 2 !important;
+}

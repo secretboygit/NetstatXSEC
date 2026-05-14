@@ -19,7 +19,7 @@ function GirlModel() {
     >
       <primitive
         object={scene}
-        scale={2.2}
+        scale={1.9}
         position={[0.8, -3, -2]}
         rotation={[0, 0, 0]}
       />
@@ -30,7 +30,7 @@ function GirlModel() {
 export default function Scene3D() {
   return (
     <Canvas
-      camera={{ position: [0, 0, 5], fov: 45 }}
+      camera={{ position: [0, 0, 6], fov: 50 }}
       style={{
         position: "fixed",
         top: 0,
@@ -52,8 +52,8 @@ export default function Scene3D() {
       <Stars
         radius={100}
         depth={60}
-        count={3000}
-        factor={4}
+        count={1200}
+        factor={2.5}
         saturation={0}
         fade
         speed={1}

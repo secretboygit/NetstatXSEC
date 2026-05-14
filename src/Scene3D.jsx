@@ -11,11 +11,11 @@ function GirlModel({ isMobile }) {
   return (
     <Float speed={1.2} rotationIntensity={0.12} floatIntensity={0.55}>
       <primitive
-        object={model}
-        scale={isMobile ? 1.35 : 2.2}
-        position={isMobile ? [0, -2.2, -2.2] : [0.8, -3, -2]}
-        rotation={[0, 0, 0]}
-      />
+  object={model}
+  scale={isMobile ? 1.55 : 2.25}
+  position={isMobile ? [0, -1.45, -2.2] : [0.8, -2.25, -2]}
+  rotation={[0, 0, 0]}
+/>
     </Float>
   );
 }

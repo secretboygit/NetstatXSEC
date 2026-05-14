@@ -497,7 +497,7 @@ function ProjectPopup() {
       </button>
 
       <h2 style={{ color: "#00ff73", fontSize: "30px", marginBottom: "12px" }}>
-        NetstatX
+        ZeroTrace
       </h2>
 
       <p style={{ color: "#e8fff0", lineHeight: "1.6", fontSize: "15px", marginBottom: "18px" }}>
@@ -604,7 +604,7 @@ export default function App() {
 
       <nav className="nav glassNav">
         <button className="logo" onClick={() => go("/")}>
-          <span>NetstatX</span>SEC
+          <span>ZeroTrace</span>SEC
         </button>
 
         <div className="links">

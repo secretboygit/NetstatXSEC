@@ -594,8 +594,11 @@ function ProjectPopup() {
           <select name="budget_range" required defaultValue="">
             <option value="" disabled>Budget Range</option>
             <option>₹5,000 - ₹15,000</option>
-            <option>₹15,000 - ₹50,000</option>
-            <option>₹50,000+</option>
+            <option>₹15,000 - ₹25,000</option>
+            <option>₹25,000 - ₹35,000</option>
+            <option>₹40,000 - ₹50,000</option>
+            <option>₹80,000+</option>
+             <option>Other</option>
           </select>
         </div>
 

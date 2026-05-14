@@ -49,6 +49,7 @@ export default function PopupForm() {
             <option>Cybersecurity Lab</option>
             <option>Portfolio</option>
             <option>Technical Project</option>
+             <option>Other</option>
           </select>
 
           <textarea placeholder="Tell me about your project..." required />

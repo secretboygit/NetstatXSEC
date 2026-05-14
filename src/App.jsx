@@ -163,29 +163,90 @@ function Home({ go }) {
 }
 
 function Portfolio() {
+  const portfolioCards = [
+    {
+      title: "Offensive Security",
+      text: "Web application testing, recon workflow, attack surface analysis and practical red team methodology.",
+    },
+    {
+      title: "Custom Tool Development",
+      text: "Python-based CLI tools, OSINT systems, automation workflows, dashboards and repeatable security utilities.",
+    },
+    {
+      title: "Hardware Hacking",
+      text: "Embedded experiments, device analysis, physical security concepts and custom hardware security labs.",
+    },
+    {
+      title: "Linux & Infrastructure",
+      text: "Linux administration, server setup, networking basics, troubleshooting and deployment workflow.",
+    },
+    {
+      title: "OSINT Intelligence",
+      text: "Domain profiling, public data research, business intelligence and automated information collection.",
+    },
+    {
+      title: "AI + Automation",
+      text: "Personal AI assistant workflows, memory systems, automation commands and productivity-focused tools.",
+    },
+  ];
+
   return (
     <div className="section">
       <h2>Portfolio</h2>
 
-      <p className="desc" style={{ textAlign: "center", margin: "0 auto 40px" }}>
-        A clean professional profile focused on red teaming and create own custom tools.
+      <p className="desc" style={{ textAlign: "center", margin: "0 auto 50px" }}>
+        ZeroTrace is focused on offensive security, custom tools, automation,
+        OSINT intelligence, Linux systems and practical cybersecurity research.
       </p>
 
       <div className="grid">
         <div className="card tilt">
           <h3>Mr.Mystix</h3>
-          <p>Offensive Security Specialist & Hardware Hacker focused on practical security, Linux, OSINT, automation and custom tools.</p>
+          <p>
+            Offensive Security Specialist and Hardware Hacker focused on building
+            practical cyber tools, labs, dashboards and real-world technical systems.
+          </p>
         </div>
 
         <div className="card tilt">
-          <h3>Focus Areas</h3>
-          <p>Web Pentesting, Recon Workflow, Linux Administration, Python Automation, Hardware Hacking and OSINT Intelligence.</p>
+          <h3>Mission</h3>
+          <p>
+            To create useful security-focused products that help businesses,
+            learners and technical teams understand, automate and secure systems.
+          </p>
         </div>
 
         <div className="card tilt">
-          <h3>Professional Goal</h3>
-          <p>Building useful cybersecurity tools, labs, dashboards and real-world technical products.</p>
+          <h3>Brand</h3>
+          <p>
+            ZeroTrace represents clean execution, stealth mindset, technical depth
+            and professional offensive security research.
+          </p>
         </div>
+      </div>
+
+      <div className="section" style={{ paddingLeft: 0, paddingRight: 0 }}>
+        <p className="sectionTag">CAPABILITY MATRIX</p>
+        <h2>Technical Focus</h2>
+
+        <div className="grid">
+          {portfolioCards.map((item) => (
+            <div className="card tilt" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="card tilt" style={{ marginTop: "40px" }}>
+        <h3>Professional Summary</h3>
+        <p>
+          I work on practical cybersecurity systems including recon tools, OSINT
+          automation, Linux workflows, hardware hacking experiments, AI assistant
+          systems and premium technical websites. My focus is not only learning,
+          but building real products that solve real problems.
+        </p>
       </div>
     </div>
   );

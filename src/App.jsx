@@ -7,6 +7,9 @@ import fun1 from "./assets/gallery/fun/pic1.jpg";
 import hardware1 from "./assets/gallery/hardware/pic1.jpg";
 import client1 from "./assets/gallery/clients/pic1.jpg";
 import ai1 from "./assets/gallery/ai-workflow/pic1.jpg";
+import akashPic from "./assets/team/akash.jpg";
+import ranjanPic from "./assets/team/ranjan.jpg";
+import madhurPic from "./assets/team/madhur.jpg";
 
 const FORMSPREE_URL = "https://formspree.io/f/YOUR_FORMSPREE_ID";
 
@@ -505,6 +508,118 @@ function Contact() {
     </div>
   );
 }
+function TeamMembers() {
+  return (
+    <div className="section">
+      <p className="sectionTag">TEAM</p>
+      <h2>Core Members</h2>
+
+      <div className="grid">
+
+        <div className="card tilt">
+          <img
+            src={akashPic}
+            alt="Akash Ram"
+            style={{
+              width: "100%",
+              height: "320px",
+              objectFit: "cover",
+              borderRadius: "18px",
+              marginBottom: "18px",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          />
+
+          <h3>Akash Ram</h3>
+
+          <p
+            style={{
+              color: "#00ff73",
+              fontWeight: "700",
+              marginBottom: "14px",
+            }}
+          >
+            Red Teaming & Security Specialist
+          </p>
+
+          <p>
+            Specialized in VAPT, Web Security, API Testing,
+            OSINT, Linux environments, Android testing and
+            offensive security workflows.
+          </p>
+        </div>
+
+        <div className="card tilt">
+          <img
+            src={ranjanPic}
+            alt="Ranjan Vishwakarma"
+            style={{
+              width: "100%",
+              height: "320px",
+              objectFit: "cover",
+              borderRadius: "18px",
+              marginBottom: "18px",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          />
+
+          <h3>Ranjan Vishwakarma</h3>
+
+          <p
+            style={{
+              color: "#00ff73",
+              fontWeight: "700",
+              marginBottom: "14px",
+            }}
+          >
+            AI & Web Systems Engineer
+          </p>
+
+          <p>
+            Focused on AI workflows, frontend systems,
+            modern web applications, UI/UX optimization,
+            automation and scalable digital platforms.
+          </p>
+        </div>
+
+        <div className="card tilt">
+          <img
+            src={madhurPic}
+            alt="Madhur Patidar"
+            style={{
+              width: "100%",
+              height: "320px",
+              objectFit: "cover",
+              borderRadius: "18px",
+              marginBottom: "18px",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          />
+
+          <h3>Madhur Patidar</h3>
+
+          <p
+            style={{
+              color: "#00ff73",
+              fontWeight: "700",
+              marginBottom: "14px",
+            }}
+          >
+            Offensive Security Researcher & Hardware Hacker
+          </p>
+
+          <p>
+            Focused on offensive security, OSINT systems,
+            red teaming workflows, custom cybersecurity tools,
+            hardware hacking labs, Linux environments and
+            automation-driven security infrastructure.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  );
+}
 
 function ProjectPopup() {
   const [show, setShow] = useState(false);
@@ -689,6 +804,8 @@ export default function App() {
       </nav>
 
       {Page}
+
+         <TeamMembers />
 
       <ProjectPopup />
     </div>

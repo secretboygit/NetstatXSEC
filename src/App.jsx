@@ -4,9 +4,23 @@ import Scene3D from "./Scene3D";
 
 import achievement1 from "./assets/gallery/achievements/pic1.jpg";
 import fun1 from "./assets/gallery/fun/pic1.jpg";
+import fun2 from "./assets/gallery/fun/pic2.jpg";
+import fun3 from "./assets/gallery/fun/pic3.jpg";
+import fun4 from "./assets/gallery/fun/pic4.jpg";
+import fun5 from "./assets/gallery/fun/pic5.jpg";
+import fun6 from "./assets/gallery/fun/pic6.jpg";
+import fun7 from "./assets/gallery/fun/pic7.jpg";
+
+import funVideo1 from "./assets/gallery/fun/video1.mp4";
+import funVideo2 from "./assets/gallery/fun/video2.mp4";
 import hardware1 from "./assets/gallery/hardware/pic1.jpg";
+import hardware2 from "./assets/gallery/hardware/pic2.jpg";
+import hardware3 from "./assets/gallery/hardware/pic3.jpg";
+
 import client1 from "./assets/gallery/clients/pic1.jpg";
 import ai1 from "./assets/gallery/ai-workflow/pic1.jpg";
+import hardwareVideo1 from "./assets/gallery/hardware/video1.mp4";
+import hardwareVideo2 from "./assets/gallery/hardware/video2.mp4";
 import akashPic from "./assets/team/akash.jpg";
 import ranjanPic from "./assets/team/ranjan.jpg";
 import madhurPic from "./assets/team/madhur.jpg";
@@ -284,30 +298,75 @@ function Projects() {
 function Services() {
   const services = [
     ["🛡️", "Cybersecurity Projects", "Recon tools, OSINT systems, security dashboards, lab environments and reporting workflows."],
+
     ["⚙️", "Custom Automation Tools", "Python utilities, lead systems, data extractors, CSV/Excel automation and CLI tools."],
+
     ["🌐", "Websites & Portfolios", "Premium websites, landing pages, personal portfolios and client-ready UI systems."],
+
     ["💼", "Business Software", "CRM-style panels, admin dashboards, enquiry systems, booking flows and internal tools."],
+
     ["🤖", "AI Assistant Projects", "Personal assistant interfaces, chatbot workflows, AI routing and productivity automation."],
+
     ["🐧", "Linux & Server Setup", "Linux setup, server basics, deployment support, troubleshooting and documentation."],
+
+    ["📡", "Networking Training", "Private networking classes covering TCP/IP, routing, switching, troubleshooting and practical infrastructure concepts."],
+
+    ["🌐", "CCNA Preparation", "Practical CCNA-oriented training including networking fundamentals, Cisco concepts, subnetting and real-world configuration workflow."],
+
+    ["🐧", "Linux Training", "Hands-on Linux training focused on commands, administration, permissions, server workflow and troubleshooting."],
+
+    ["🛡️", "Ethical Hacking (Offensive Security)", "Private offensive-security-focused ethical hacking classes based on CEH-style modules, labs, recon workflow and practical security concepts."],
+
+    ["🔬", "Hardware Hacking Training", "Hardware hacking basics, embedded device concepts, practical labs, hardware security workflow and experimentation guidance."],
   ];
 
   return (
     <div className="section">
       <h2>Services</h2>
 
-      <p className="desc" style={{ textAlign: "center", margin: "0 auto 40px" }}>
-        Premium technical services for cybersecurity, automation, websites, AI, Linux and business systems.
+      <p
+        className="desc"
+        style={{ textAlign: "center", margin: "0 auto 40px" }}
+      >
+        Professional services and private training programs for cybersecurity,
+        networking, Linux, offensive security, automation and technical systems.
       </p>
 
       <div className="grid">
         {services.map(([icon, title, text]) => (
           <div className="card tilt servicePremium" key={title}>
             <div className="icon">{icon}</div>
+
             <h3>{title}</h3>
+
             <p>{text}</p>
-            <small style={{ color: "#00ff73", fontWeight: "800" }}>Premium Delivery →</small>
+
+            <small
+              style={{
+                color: "#00ff73",
+                fontWeight: "800",
+              }}
+            >
+              Premium Delivery →
+            </small>
           </div>
         ))}
+      </div>
+
+      <div
+        className="card tilt"
+        style={{
+          marginTop: "40px",
+          textAlign: "center",
+        }}
+      >
+        <h3>Private Technical Classes</h3>
+
+        <p>
+          One-to-one and private batch training available for Networking,
+          CCNA, Linux, Offensive Security, Ethical Hacking and Hardware Hacking.
+          Contact us for customized practical training sessions.
+        </p>
       </div>
     </div>
   );
@@ -317,19 +376,50 @@ function Gallery() {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const items = [
-    ["01", "Achievements", "Photo highlights and achievement moments.", "image", achievement1],
+    [
+      "01",
+      "Achievements",
+      "Photo highlights and achievement moments.",
+      "image",
+      achievement1,
+    ],
     ["02", "Fun", "Casual and fun moments.", "image", fun1],
-    ["03", "Hardware Experiments", "Hardware hacking labs and physical device experiments.", "image", hardware1],
-    ["04", "Clients Projects", "Client work and project showcase.", "image", client1],
-    ["05", "AI Workflow", "AI assistant workflow and automation setup.", "image", ai1],
+    [
+      "03",
+      "Hardware Experiments",
+      "Hardware hacking labs and physical device experiments.",
+      "image",
+      hardware1,
+    ],
+    [
+      "04",
+      "Clients Projects",
+      "Client work and project showcase.",
+      "image",
+      client1,
+    ],
+    [
+      "05",
+      "AI Workflow",
+      "AI assistant workflow and automation setup.",
+      "image",
+      ai1,
+    ],
   ];
 
   return (
     <div className="section">
       <h2>Gallery</h2>
 
-      <p className="desc" style={{ textAlign: "center", margin: "0 auto 40px" }}>
-        Visual-style highlights of labs, tools, experiments and premium technical builds.
+      <p
+        className="desc"
+        style={{
+          textAlign: "center",
+          margin: "0 auto 40px",
+        }}
+      >
+        Visual-style highlights of labs, tools, experiments and premium
+        technical builds.
       </p>
 
       <div className="grid">
@@ -408,7 +498,12 @@ function Gallery() {
               ×
             </button>
 
-            <h2 style={{ color: "#00ff73", marginBottom: "20px" }}>
+            <h2
+              style={{
+                color: "#00ff73",
+                marginBottom: "20px",
+              }}
+            >
               {selectedItem.title}
             </h2>
 
@@ -441,7 +536,6 @@ function Gallery() {
     </div>
   );
 }
-
 function About() {
   return (
     <div className="section">
@@ -543,9 +637,11 @@ function TeamMembers() {
           </p>
 
           <p>
-            Specialized in VAPT, Web Security, API Testing,
-            OSINT, Linux environments, Android testing and
-            offensive security workflows.
+            Specialized in Web Pentesting, 
+            VAPT, Reverse Engineering, 
+            Malware Analysis, Security Tool Development,
+            Red Teaming, OSINT, Android App Security,
+            Linux Server Security & Website Hardening.
           </p>
         </div>
 
@@ -636,6 +732,40 @@ function ProjectPopup() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleWhatsAppSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const projectType = form.project_type.value;
+    const budget = form.budget_range.value;
+    const message = form.message.value;
+
+    const whatsappMessage = `
+🚀 New Project Enquiry
+
+👤 Name: ${name}
+📧 Email: ${email}
+🛠️ Project Type: ${projectType}
+💰 Budget: ${budget}
+
+📝 Message:
+${message}
+`;
+
+    const phoneNumber = "919981188072";
+
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank"
+    );
+
+    localStorage.setItem("projectFormSubmitted", "true");
+    setShow(false);
+  };
+
   if (!show) return null;
 
   return (
@@ -676,19 +806,21 @@ function ProjectPopup() {
         ZeroTrace
       </h2>
 
-      <p style={{ color: "#e8fff0", lineHeight: "1.6", fontSize: "15px", marginBottom: "18px" }}>
+      <p
+        style={{
+          color: "#e8fff0",
+          lineHeight: "1.6",
+          fontSize: "15px",
+          marginBottom: "18px",
+        }}
+      >
         Use this form for websites, automation systems, cybersecurity labs,
-        portfolio work and technical projects.
+        portfolio work, Classes and technical projects.
       </p>
 
       <form
         className="contactForm"
-        action={FORMSPREE_URL}
-        method="POST"
-        onSubmit={() => {
-          localStorage.setItem("projectFormSubmitted", "true");
-          setShow(false);
-        }}
+        onSubmit={handleWhatsAppSubmit}
         style={{ display: "grid", gap: "14px" }}
       >
         <div className="formRow">
@@ -698,22 +830,27 @@ function ProjectPopup() {
 
         <div className="formRow">
           <select name="project_type" required defaultValue="">
-            <option value="" disabled>Project Type</option>
+            <option value="" disabled>
+              Project Type
+            </option>
             <option>Website Development</option>
             <option>Automation Tool</option>
             <option>Cybersecurity Lab</option>
             <option>Portfolio Website</option>
+            <option>Classes</option>
             <option>Other</option>
           </select>
 
           <select name="budget_range" required defaultValue="">
-            <option value="" disabled>Budget Range</option>
+            <option value="" disabled>
+              Budget Range
+            </option>
             <option>₹5,000 - ₹15,000</option>
             <option>₹15,000 - ₹25,000</option>
             <option>₹25,000 - ₹35,000</option>
             <option>₹40,000 - ₹50,000</option>
             <option>₹80,000+</option>
-             <option>Other</option>
+            <option>Other</option>
           </select>
         </div>
 
